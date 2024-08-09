@@ -142,23 +142,21 @@ app.post("/registerPet", (req, res) => {
 });
 app.post("/browse", (req, res) => {
     const { animal, breed, age, gender, GetAlongWith } = req.body;
- 
-
     fs.readFile("availablePetInformation.txt", "utf8", (err, data) => {
         if (err) {
-            console.error("Error reading availablePetInformation.txt:", err);
+            console.error("Error reading pets.txt:", err);
             return res.status(500).send("Error reading pet data file.");
         }
         const petsData = data.split("\n");
         const filteredPets = petsData.filter(line => {
             const parts = line.split(":");
-            return (parts[0].toLowerCase() === animal.toLowerCase()) &&
+            return (!animal || parts[0].toLowerCase() === animal.toLowerCase()) &&
                 (!breed || breed === "mixedBreed" || parts[1].toLowerCase().includes(breed.toLowerCase())) &&
                 (age === "No preference" || parts[2] === age) &&
                 (gender === "No preference" || parts[3] === gender) &&
                 (!GetAlongWith || parts[4] === GetAlongWith);
         });
-        res.render("browse",{pets: filteredPets});
+        res.render("browse", { pets: filteredPets });
     });
 });
 
