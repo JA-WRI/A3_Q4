@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Pet</title>
+    <link rel="stylesheet" href="/styles/home.css">
+
+</head>
+
+<body>
+    <div id="body-container">
+        <div id="content-wrap">
+            <%- include("partials/headerOther.ejs")%>
+            <div class="header2">
+                <div class="image-text">
+                    <h1 style="padding:100px 0">Browser Our Beautiful pets</h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="sideMenu">
+                    <%- include("partials/sideMenu.ejs")%>
+                </div>
+                <div class=main-title>
+                    <h1>Let's Adopt a Pet!</h1>
+                </div>
+                <div class="content">
+                    <div class="home">
+                        <form id="form" action="/browse" method="post">
+                            <fieldset>
+                                <legend><b>Adoption Form</b></legend>
+                                <label>What kind of animal would you like: </label>
+                                <input type="radio" id="cat" name="animal" value="cat">
+                                <label for="cat">Cat</label>
+                                <input type="radio" id="dog" name="animal" value="dog">
+                                <label for="dog">Dog</label><br>
+                                <p class="error-message" id="errorMessage3"></p>
+                                <br><br>
+                                <label for="breed">Preferred Breed:</label>
+                                <input type="text" id="breed" name="breed">
+                                <input type="checkbox" id="any" name="breed" value="any">
+                                <label>No preference</label><br><br><br>
+
+                                <label>Prefered age: </label>
+                                <select name="age">
+                                    <option value="no preference">No Preference</option>
+                                    <option value="less than a year">Less than a year</option>
+                                    <option value="1-3 years">1-3 years</option>
+                                    <option value="4-7">4-7 years</option>
+                                    <option value="3-10">7-10 years</option>
+                                    <option value="over 10">More than 10 years</option>
+                                </select><br><br><br>
+
+                                <label>Gender:</label>
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                                <input type="radio" id="eitherGender" name="gender" value="either gender">
+                                <label for="eitherGender">No Preference </label><br>
+                                <p class="error-message" id="errorMessage4"></p><br><br>
+                                
+                                <label>Needs to be Friendly with:</label><br><br>
+                                <input type="checkbox" id="otherCats" name="GetAlongWith[]" value="Cats">
+                                <label for="otherCats">Other Cats</label>
+                                <input type="checkbox" id="otherDogs" name="GetAlongWith[]" value="dogs">
+                                <label for="otherDogs">Other Dogs</label>
+                                <input type="checkbox" id="children" name="GetAlongWith[]" value="children">
+                                <label for="children">Children</label>
+                                <label for="otherDogs">None</label>
+                                <input type="checkbox" id="none" name="GetAlongWith[]" value="none"><br>
+                                <p class="error-message" id="errorMessage5"></p>
+                            </fieldset><br>
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="Adopt Me">
+                            <br><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <%- include("partials/footer.ejs")%>
+    </div>
+    <script src="../scripts/home.js"></script>
+</body>
+
+</html>

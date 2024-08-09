@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create An Account</title>
+    <link rel="stylesheet" href="/styles/home.css">
+    <script>
+        setTimeout(function() {
+            window.location.href = "/";
+        }, 3000); 
+    </script>
+</head>
+
+<body>
+    <div id="body-container">
+        <div id="content-wrap">
+            <%- include("partials/headerOther.ejs")%>
+                <div>
+                    <div class="header2">
+                        <div class="image-text">
+                            <h1 style="padding:100px 0">LoginOut</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="sideMenu">
+                        <%- include("partials/sideMenu.ejs")%>
+                    </div>
+                    <div class=" main-title">
+                        <h3 style="font-size:50px">Have a Great day!</h3>
+                    </div>
+                    <div class="content">
+                        <div class="home">
+                            <% if (typeof message !== 'undefined') { %>
+                                <p><%= message %></p>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <%- include("partials/footer.ejs")%>
+    </div>
+    <script src="../scripts/home.js"></script>
+</body>
+
+</html>

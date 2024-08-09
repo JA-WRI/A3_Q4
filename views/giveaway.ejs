@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Have a Pet to Give Away</title>
+    <link rel="stylesheet" href="/styles/home.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="body-container">
+        <div id="content-wrap">
+            <%- include("partials/headerOther.ejs")%>
+            <div class="header2">
+                <div class="image-text">
+                    <h1 style="padding:100px 0">Have a Pet To Give Away</h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="sideMenu">
+                    <%- include("partials/sideMenu.ejs")%>
+                </div>
+                <div class="main-title">
+                    <h1>Let's find your pet a FurEver home </h1>
+                </div>
+                <div class="content">
+                    <div class="home">
+                        <form id="form" action="/registerPet" method="post">
+                            <fieldset>
+                                <legend><b>Register an Animal</b></legend>
+                                <label>Which animal are you giving away:</label>
+                                <input type="radio" id="cat" name="animal" value="cat">
+                                <label for="cat">Cat</label>
+                                <input type="radio" id="dog" name="animal" value="dog">
+                                <label for="dog">Dog</label><br>
+                                <p class="error-message" id="errorMessage3"></p>
+                                <br><br>
+                                <label for="breed">Breed:</label>
+                                <input type="text" id="breed" name="breed">
+                                <input type="checkbox" id="mixed" name="breed" value="mixed">
+                                <label>Mixed Breed</label><br><br><br>
+
+                                <label>Age of your animal: </label>
+                                <select name="age">
+                                    <option value="less than a year">Less than a year</option>
+                                    <option value="1-3 years">1-3 years</option>
+                                    <option value="4-7">4-7 years</option>
+                                    <option value="3-10">3-10 years</option>
+                                    <option value="over 10">More than 10 years</option>
+                                </select><br><br><br>
+
+
+                                <label>Gender:</label>
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                                <p class="error-message" id="errorMessage4"></p>
+                                <br>
+
+
+                                <label>Gets along with:</label><br><br>
+                                <input type="checkbox" id="otherCats" name="GetAlongWith[]" value="Cats">
+                                <label for="otherCats">Other Cats</label>
+                                <input type="checkbox" id="otherDogs" name="GetAlongWith[]" value="dogs">
+                                <label for="otherDogs">Other Dogs</label>
+                                <input type="checkbox" id="children" name="GetAlongWith[]" value="children">
+                                <label for="children">Family with small Children</label>
+                                <input type="checkbox" id="none" name="GetAlongWith[]" value="none">
+                                <label for="otherCats">None</label><br><br>
+                                <p class="error-message" id="errorMessage5"></p>
+                                <label>Comments</label><br>
+                                <textarea id="comments" name="comments" rows="5"
+                                    cols="60">tell us how amazing your pet is!</textarea>
+                                <br><br>
+                                <fieldset class="field2">
+                                    <legend style="text-align: center;">Owners information</legend>
+                                    <label>First Name </label>
+                                    <input type="text" name="fname">&emsp;
+                                    <label>Family Name</label>
+                                    <input type="text" name="lname">&emsp;
+                                    <label>Email</label>
+                                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                                    <br><br>
+                                </fieldset>
+                            </fieldset><br>
+                            <button type="reset">Reset</button>
+                            <button type="submit">Register</button>
+                        </form>
+                        <% if (typeof message !== "undefined") { %>
+                            <p><%= message %></p>
+                        <% } %>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <%- include("partials/footer.ejs")%>
+    </div>
+    <script src="../scripts/home.js"></script>
+</body>
+
+</html>

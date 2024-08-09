@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet</title>
+    <link rel="stylesheet" href="/styles/home.css">
+
+
+</head>
+
+<body>
+    <div id="body-container">
+        <div id="content-wrap">
+            <%- include("partials/headerHome.ejs")%>
+            <div class="container">
+                <div class="sideMenu">
+                    <%- include("partials/sideMenu.ejs")%>
+                </div>
+                <div class=" main-title">
+                    <h1 style="font-size:50px">Let's Get You a FurEver Pet! </h1>
+                </div>
+                <div class="content">
+                    <div class="home">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img style="mix-blend-mode: multiply;"
+                                        src="https://cdn-icons-png.flaticon.com/512/9994/9994323.png"
+                                        alt="Find a pet icon" width="80">
+                                <td>
+                                <td style="font-size: 20px; padding-left: 50px">We have a huge list of cute furry
+                                    friends that need a forever home. Take a look and
+                                    find one to take home.
+                                </td>
+                            </tr>
+                        </table><br><br><br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img style="mix-blend-mode: multiply;"
+                                        src="https://cdn-icons-png.flaticon.com/512/8183/8183061.png"
+                                        alt="Adopt a pet icon" width="80">
+                                <td>
+                                <td style="font-size: 20px; padding-left: 50px">Are you ready to take home your new pet?
+                                    Get started with our simple and easy adaoption prossess. Just fill out the
+                                    form and we will place you with a pet of your choice or we will pick the one that
+                                    best fits your needs.
+                                </td>
+                            </tr>
+                        </table><br><br><br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img style="mix-blend-mode: multiply;"
+                                        src="https://cdn-icons-png.flaticon.com/512/2138/2138440.png"
+                                        alt="Animal care icon" width="80">
+                                <td>
+                                <td style="font-size: 20px; padding-left: 50px">Getting started with a new pet? No need
+                                    to worry, we have all the beginning steps that you need to
+                                    in order to properly care for your new pet. We have additional resources to
+                                    make the transition as easy and stress free as possible.
+                                </td>
+                            </tr>
+                        </table><br><br><br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img style="mix-blend-mode: multiply;"
+                                        src="https://uxwing.com/wp-content/themes/uxwing/download/animals-and-birds/dog-crate-color-icon.png"
+                                        alt="Pet carrier icon, Give your pet a better home icon" width="80">
+                                <td>
+                                <td style="font-size: 20px; padding-left: 50px">Let's give your pet a new home. If you
+                                    can
+                                    no
+                                    longer care for your pet, fear not we will make sure
+                                    they can be given to a new family. Fill out the give away a pet form and we will
+                                    take care of the rest!
+                                </td>
+                            </tr>
+                        </table><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include("partials/footer.ejs")%>
+    </div>
+    <script src="../scripts/home.js"></script>
+</body>
+
+</html>

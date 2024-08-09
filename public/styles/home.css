@@ -1,0 +1,262 @@
+#body-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+table img {
+    width: 75px;
+}
+
+table td {
+    font-size: 20px;
+}
+.top-header{
+    display:flex;
+    justify-content: space-between;
+}
+
+.header {
+    background-image: url(https://olympuscovevet.com/wp-content/uploads/2017/10/service-banner-default.jpg );
+    height: 280px;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+}
+
+.header2 {
+    height: 280px;
+    width: 100%;
+    background-image: url(https://olympuscovevet.com/wp-content/uploads/2017/10/service-banner-default.jpg );
+    background-repeat: no-repeat;
+    font-size: 25px;
+    margin-top: -30px;
+}
+
+.image-text {
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 280px;
+    width: 100%;
+    text-align: center;
+}
+
+.main-title {
+    margin-left: 25x;
+    margin-bottom: 25px;
+}
+
+.sideMenu {
+    background-color: #ECB159;
+    border-radius: 10px;
+    text-align: center;
+    padding:5px;
+
+}
+
+.sideMenu a {
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Lexend', sans-serif;
+    color: #331a00;
+    padding:10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    background-color: #FAEBD7;
+}
+fieldset{
+    font-size:larger;
+    padding:40px;
+    background-color:#ffffcc;
+    font-family: Georgia;
+}
+.field2{
+    font-size:medium;
+    padding:10px;
+}
+legend{
+    text-align: center;
+}
+.list-items li {
+    padding: 5px;
+    font-family: "New Century Schoolbook";
+    margin-left: 20px;
+}
+.list-items {
+    border-color: black;
+    border-left: 100px;
+    border-radius: 20px;
+    width: 550px;
+    background-color: #ffa64d;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: 50px;
+    flex: 0 0 200px;
+    
+}
+.info-care {
+    align-items: center;
+    padding-bottom:50px;
+}
+.container{
+    margin-bottom:80px;
+
+}
+.footer {
+    background-color: #ff944d;
+    text-align: center;
+    width: 100%;
+    font-family: 'Lexend', sans-serif;
+    bottom: 0;
+    position: absolute;
+    padding:5px;
+}
+
+.availablePets ul{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    padding:0 10px;
+}
+.availablePets li{
+    border: solid 2px grey;
+    border-radius: 20px;
+    margin:3px;
+    font-size: 10pt;
+    padding: 40px 10px;
+    color: #000000;
+    position:relative;
+}
+.availablePets .image{
+    float:right;
+    border-radius: 70px;
+    height: 150px;
+}
+.availablePets li h3{
+    display:inline;
+    color: #5e7d83;
+}
+.availablePets li p{
+    display:inline;
+}
+.availablePets button{
+    margin:10px;
+    position:absolute;
+    left:35%;
+    top:85%;
+}
+.availablePets .button:hover {
+    opacity:1;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+ }
+
+
+
+@media only screen and (min-width: 992px) {
+    table img {
+        width: 80px;
+    }
+
+    table td {
+        font-size: 25px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: .3fr 1fr;
+        grid-template-rows: .3fr 1fr;
+        margin-top: 50px;
+
+    }
+
+    .sideMenu {
+        grid-row: span 2;
+        background-color: #FAEBD7;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 50px;
+
+    }
+
+    .mainMenu {
+        text-align: center;
+        border-radius: 20px;
+        background-color: #ECB159;
+        display: flex;
+        flex-direction: column;
+        height: 320px;
+        width: 200px;
+        gap: 25px;
+        margin-left: 30px;
+        margin-right: 30px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+
+    }
+
+    .mainMenu h1 {
+        margin-bottom: 50px;
+
+    }
+
+    .sideMenu a {
+        padding: 0px;
+        position:relative;
+    }
+
+    .home {
+        width: 990px;
+        margin-bottom: 25px;
+    }
+
+    .info-contact {
+        text-align: center;
+        padding-bottom: 150px;
+        padding-right: 100px;
+        margin-left: 200px;
+        margin-top: 50px;
+
+    }
+
+    .info-contact h2 {
+        text-decoration: underline;
+        font-size: 20px;
+    }
+
+    .info-contact p {
+        font-size: 15px;
+    }
+
+    #contact {
+        text-align: center;
+    }
+
+
+    .info h2 {
+        text-decoration: underline;
+    }
+
+    .info-care {
+        margin-left: 350px;
+        margin-top: -300px;
+        width: 990px;
+        padding-bottom:50px;
+    }
+
+
+
+}
