@@ -116,6 +116,11 @@ legend{
     bottom: 0;
     position: absolute;
     padding:5px;
+  
+}
+.footer a{
+    text-decoration: none;
+    color:#331a00;
 }
 
 .availablePets ul{

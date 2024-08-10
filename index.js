@@ -130,7 +130,7 @@ app.post("/registerPet", (req, res) => {
         
     });
     const { animal, breed, age, gender, GetAlongWith, comments, fname,lname, email } = req.body;
-    const petString = ++lines + + ":"+  req.session.username`:${animal}:${breed}:${age}:${gender}:${GetAlongWith}:${comments}:${fname}:${lname}:${email}\n`;
+    const petString = ++lines +`:${animal}:${breed}:${age}:${gender}:${GetAlongWith}:${comments}:${fname}:${lname}:${email}\n`;
 
     fs.appendFile("availablePetInformation.txt", petString, (err) => {
         if (err) {
